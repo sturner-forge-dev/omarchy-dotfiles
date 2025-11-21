@@ -26,9 +26,14 @@ alias gp='git push'
 alias gpo='git push origin'
 alias gitup='git fetch && git pull'
 
+#TMUX
+alias ta='tmux attach'
+alias tls='tmux ls'
+alias tks='tmux kill-server'
+
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Created by `pipx` on 2025-11-13 22:18:19
-export PATH="$PATH:/home/steventurner/.local/bin"
+export PATH="$PATH:/home/stsventurner/.local/bin"
