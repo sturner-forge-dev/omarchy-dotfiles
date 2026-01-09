@@ -14,8 +14,8 @@ source ~/.local/share/omarchy/default/bash/rc
 # alias lfg='lofigirl'
 
 # Shell
-alias c='clear'
-alias v='nvim'
+# alias c='clear'
+# alias v='nvim'
 
 #Git
 alias gst='git status'
@@ -42,4 +42,7 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Created by `pipx` on 2025-11-13 22:18:19
-export PATH="$PATH:/home/stsventurner/.local/bin"
+export PATH="$PATH:/home/steventurner/.local/bin"
+
+# opencode
+export PATH=/home/steventurner/.opencode/bin:$PATH
