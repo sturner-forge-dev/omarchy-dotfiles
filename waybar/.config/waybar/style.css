@@ -20,11 +20,11 @@ window#waybar {
 #bluetooth,
 #pulseaudio,
 #language,
-#battery,
 #cpu,
 #custom-noti,
 #custom-weather,
 #custom-screenrecording-indicator,
+#custom-always-plugged,
 #group-tray-expander {
   background: linear-gradient(
     145deg,
@@ -79,7 +79,7 @@ window#waybar {
 #pulseaudio {
   color: @color3;
 }
-#battery {
+#custom-always-plugged {
   color: @color2;
 }
 #language {
@@ -105,7 +105,7 @@ window#waybar {
 #network:hover,
 #bluetooth:hover,
 #pulseaudio:hover,
-#battery:hover,
+#custom-always-plugged:hover,
 #clock:hover,
 #cpu:hover,
 #custom-omarchy:hover,

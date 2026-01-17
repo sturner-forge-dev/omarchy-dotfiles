@@ -9,24 +9,19 @@
 	"margin-left": 20,
 	"margin-right": 20,
 	"modules-left": [
-		// "custom/omarchy",
 		"clock",
 		"custom/screenrecording-indicator",
-		"custom/weather"
-	],
-	"modules-center": [
-		// "clock",
-		"hyprland/workspaces",
+		"custom/weather",
 		"custom/update"
-		// "custom/screenrecording-indicator"
 	],
+	"modules-center": ["hyprland/workspaces"],
 	"modules-right": [
 		"group/tray-expander",
 		"bluetooth",
 		"network",
 		"pulseaudio",
 		"cpu",
-		"battery"
+		"custom/always-plugged"
 	],
 	"hyprland/workspaces": {
 		"on-click": "activate",
@@ -53,12 +48,12 @@
 			"5": []
 		}
 	},
-	"custom/omarchy": {
-		"format": "<span>Apps</span>",
-		"on-click": "omarchy-menu",
-		"on-click-right": "xdg-terminal-exec",
-		"tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
-	},
+	// "custom/omarchy": {
+	// 	"format": "<span>Apps</span>",
+	// 	"on-click": "omarchy-menu",
+	// 	"on-click-right": "xdg-terminal-exec",
+	// 	"tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
+	// },
 	"custom/update": {
 		"format": "",
 		"exec": "omarchy-update-available",
@@ -93,25 +88,7 @@
 		"spacing": 1,
 		"on-click": "omarchy-launch-wifi"
 	},
-	"battery": {
-		"format": "{capacity}% {icon}",
-		"format-discharging": "{icon}",
-		"format-charging": "{icon}",
-		"format-plugged": "",
-		"format-icons": {
-			"charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
-			"default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
-		},
-		"format-full": "󰂅",
-		"tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
-		"tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
-		"interval": 5,
-		"on-click": "omarchy-menu power",
-		"states": {
-			"warning": 20,
-			"critical": 10
-		}
-	},
+
 	"bluetooth": {
 		"format": "",
 		"format-disabled": "󰂲",
@@ -155,6 +132,14 @@
 		"interval": 1800,
 		"exec": "wttrbar --nerd --location Denver --fahrenheit",
 		"return-type": "json"
+	},
+	"custom/always-plugged": {
+		"format": "",
+		"exec": "powerprofilesctl get | xargs -I {} echo '{\"tooltip\": \"Power Profile: {}\"}'",
+		"exec-if": "which powerprofilesctl",
+		"interval": 5,
+		"return-type": "json",
+		"on-click": "omarchy-menu power"
 	},
 	"tray": {
 		"icon-size": 12,
