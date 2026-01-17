@@ -5,16 +5,12 @@
 # (don't mess with these directly, just overwrite them here!)
 source ~/.local/share/omarchy/default/bash/rc
 
-# Add your own exports, aliases, and functions here.
-#
-# Make an alias for invoking commands you use constantly
-# alias p='python'
-
 # Misc
-# alias lfg='lofigirl'
+alias lft='lofitui'
+alias fetch='omarchy-launch-floating-terminal-with-presentation fastfetch'
 
 # Shell
-# alias c='clear'
+alias x='clear'
 # alias v='nvim'
 
 #Git
