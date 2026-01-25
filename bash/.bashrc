@@ -10,7 +10,7 @@ alias lft='lofitui'
 alias fetch='omarchy-launch-floating-terminal-with-presentation fastfetch'
 
 # Shell
-alias x='clear'
+# alias x='clear'
 # alias v='nvim'
 
 #Git
